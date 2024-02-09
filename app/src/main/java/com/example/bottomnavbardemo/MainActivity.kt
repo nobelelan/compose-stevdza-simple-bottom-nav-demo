@@ -10,6 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.example.bottomnavbardemo.graphs.RootNavigationGraph
 import com.example.bottomnavbardemo.ui.theme.BottomNavBarDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BottomNavBarDemoTheme {
-                MainScreen()
+                RootNavigationGraph(navController = rememberNavController())
             }
         }
     }
